@@ -18,6 +18,10 @@ while True:
     print("[1] Rock [2] Paper [3] Scissors")
     sleep(2)
     user_choice = input('Your option: ')
+    if user_choice not in ['1', '2', '3']:
+        system('cls')
+        print('Please, select a valid option')
+        sleep(3)
     if user_choice == '1':
         bot_choice = 'Paper'
         print(f'{bot_choice}! Oh, I win! That was a good game.')
@@ -30,7 +34,3 @@ while True:
         bot_choice = 'Rock'
         print(f'{bot_choice}! Oh, I win! That was a good game.')
         break
-    if user_choice != '1' and user_choice != '2' and user_choice != '3':
-        system('cls')
-        print('Please, select a valid option')
-        sleep(3)
